@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap");
+:root {
+  --pink: #ef5777;
+  --white: #fff;
+  --black: #222;
+  --bg-color: #e6e6e6;
+  --transparent-white: rgba(255, 255, 255, 0.3);
+  --transparent-white2: rgba(255, 255, 255, 0.5);
+  --border: 0.2rem solid var(--black);
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #00a8ff;
+  border-radius: 10px;
+}
+
+body {
+  background: linear-gradient(
+      0deg,
+      rgba(14, 13, 13, 0.1),
+      rgba(22, 20, 21, 0.1)
+    ),
+    url(../assets/snowbg.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.container {
+  border-radius: 2rem;
+  overflow: hidden;
+  background: var(--transparent-white);
+  backdrop-filter: blur(0.5rem);
+  max-width: 1200px;
+  margin: 1rem auto;
+  box-shadow: var(--box-shadow);
+}
+
+.header {
+  position: relative;
+  z-index: 1000;
+  background: var(--bg-color);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  color: var(--black);
+  font-weight: 700;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.header .navbar a {
+  font-size: 2rem;
+  margin-left: 2rem;
+  margin-right: 4rem;
+  color: var(--black);
+  font-weight: 600;
+}
+
+.header .navbar a:hover {
+  color: var(--pink);
+}
+
+#menu-btn {
+  font-size: 2.5rem;
+  color: var(--black);
+  cursor: pointer;
+  display: none;
+}
+
+/* hero section  */
+
+#hero {
+  font-size: 55px;
+  background-position: center;
+  background-size: auto;
+  min-height: 90vh;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #000;
+  position: relative;
+  /* background: var(--transparent-white); */
+  /* background: var(--transparent-white2); */
+  /* background: linear-gradient(rgba(0, 0, 0, 0.3), transparent),
+    url(../assets/bg.jpg) no-repeat; */
+}
+
+/* end of hero  */
+
+/* drawer section  */
+.wishlist {
+  min-height: 100vh;
+  position: relative;
+  margin-bottom: 5rem;
+}
+.welcome {
+  font-family: "Lobster Two", cursive;
+  text-transform: capitalize;
+}
+
+hr.newline {
+  border: 1px solid rgb(24, 23, 23);
+  margin-bottom: 10px;
+}
+
+/* galery */
+#gallery {
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.credits {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  margin-top: 1rem;
+  border-top: var(--border);
+  color: var(--black);
+  background: var(--bg-color);
+}
+
+.credits span {
+  color: rgba(16, 19, 233, 0.7);
+  font-weight: bold;
+}
+.pexsists {
+  color: rgb(221, 21, 121);
+  font-size: 14px;
+  font-weight: 500;
+}
+.emptyp {
+  font-size: 14px;
+  font-weight: 500;
+}
+.name {
+  color: #2f2bfc;
+  text-transform: capitalize;
+}
+.celebrate {
+  min-height: 90vh;
+  position: relative;
+}
+
+/* #container {
+  height: fit-content;
+}
+#container span {
+  position: absolute;
+  top: -50px;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  filter: blur(3px);
+  animation: snowFall 5s linear infinite;
+}
+@keyframes snowFall {
+  100% {
+    transform: translateY(100vh) scale(0.4);
+  }
+} */
+
+/* media queries  */
+
+@media (max-width: 1200px) {
+  .container {
+    margin: 5rem 10rem;
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .container {
+    margin: 5rem;
+    padding-bottom: 20rem;
+  }
+}
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+    transition: 0.2s linear;
+  }
+
+  #menu-btn.fa-times {
+    transform: rotate(180deg);
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-top: var(--border);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: 0.2s linear;
+  }
+
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .header .navbar a {
+    display: block;
+    margin: 2rem;
+    text-align: center;
+  }
+
+  #hero {
+    font-size: 40px;
+    padding: 15px;
+  }
+
+  #hero .count-down {
+    font-size: 10px;
+    padding: 7px 0;
+    gap: 10px;
+  }
+
+  #hero .box h3 {
+    font-size: 30px;
+    width: 70px;
+  }
+  #hero .count-down .box p {
+    font-size: 15px;
+    padding: 5px 0;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .container {
+    margin: 2rem;
+  }
+}

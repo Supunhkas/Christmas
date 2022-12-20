@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+  --green: #27ae60;
+  --black: #444;
+  --light-color: #777;
+  --bg-color: #e6e6e6;
+  --bg-color2: #cdd5d6;
+  --transparent-white: rgba(255, 255, 255, 0.3);
+  --transparent-white2: rgba(255, 255, 255, 0.5);
+  --border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  --box-shadow: 0.4rem 0.4rem 1rem #ccc, -0.4rem -0.4rem 1rem #fff;
+
+  --box-shadow-inset: 0.4rem 0.4rem 1rem #ccc inset,
+    -0.4rem -0.4rem 1rem #fff inset;
+}
+::placeholder {
+  color: rgb(94, 91, 91);
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.list-wrapper h1 {
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 6rem;
+}
+.list-wrapper form {
+  margin: 1rem auto;
+  max-width: 70rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+}
+
+.list-wrapper form .box {
+  padding: 1rem 1.5rem;
+  width: 100%;
+  color: #000;
+  font-size: 1.6rem;
+  text-transform: none;
+  margin: 0.7rem 0;
+  box-shadow: rgba(255, 255, 255, 0.9);
+  border-radius: 0.5rem;
+  height: 5rem;
+}
+
+.list-wrapper form .box:focus {
+  box-shadow: var(--box-shadow-inset);
+}
+.listbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+}
+
+.button {
+  display: block;
+  margin: 40px 0;
+  width: 200px;
+  height: 50px;
+  border: none;
+  background-color: #00a8ff;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s linear;
+  align-self: center;
+}
+
+.button:hover {
+  box-shadow: -5px 0 15px #00a8ff;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.button:disabled {
+  background-color: #777;
+  box-shadow: none;
+  transform: none;
+}
+.list-title {
+  font-family: "Lobster Two", cursive;
+}
+/* ////////////////////////////// */
+#wishlist span {
+  position: absolute;
+  top: -50px;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  filter: blur(3px);
+  animation: snowFall 5s linear infinite;
+}
+@keyframes snowFall {
+  100% {
+    transform: translateY(90vh) scale(0.4);
+  }
+}
